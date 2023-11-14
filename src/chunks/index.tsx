@@ -1,17 +1,17 @@
-import "../css/about.css";
+import "../css/index.css";
 
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 
 class App extends React.Component {
-  constructor() {
-    super(null);
+  constructor(props: {} | Readonly<{}>) {
+    super(props);
   }
 
   render(): React.JSX.Element {
-    return <p>Hello World!</p>;
+    return <p>index works!</p>;
   }
 }
 
-const root = ReactDOM.createRoot(document.body);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);

@@ -19,14 +19,14 @@ createIfNotExists("./src/html/");
 
 createFile(
   `./src/chunks/${chunkName}.tsx`,
-  `import "../css/about.css";
+  `import "../css/${chunkName}.css";
 
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 
 class App extends React.Component {
-  constructor() {
-    super(null);
+  constructor(props: {} | Readonly<{}>) {
+    super(props);
   }
 
   render(): React.JSX.Element {
@@ -34,7 +34,7 @@ class App extends React.Component {
   }
 }
 
-const root = ReactDOM.createRoot(document.body);
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
 `
 );
@@ -57,7 +57,7 @@ createFile(
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>${chunkName}</title>
   </head>
-  <body></body>
+  <body><div id="root"></div></body>
 </html>`
 );
 
