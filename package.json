@@ -6,7 +6,9 @@
     "build": "webpack --mode=production",
     "dev": "webpack --mode=development --watch",
     "create-chunk": "node ./scripts/create-chunk.cjs $0",
-    "delete-chunk": "node ./scripts/delete-chunk.cjs $0"
+    "delete-chunk": "node ./scripts/delete-chunk.cjs $0",
+    "create-component": "node ./scripts/create-component.cjs $0",
+    "delete-component": "node ./scripts/delete-component.cjs $0"
   },
   "keywords": [
     "react"
