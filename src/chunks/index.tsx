@@ -9,7 +9,11 @@ class App extends React.Component {
   }
 
   render(): React.JSX.Element {
-    return <p>index works!</p>;
+    return (
+      <React.Fragment>
+        <img src="./images/shpe-2023.png" />
+      </React.Fragment>
+    );
   }
 }
 
