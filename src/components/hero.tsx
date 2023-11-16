@@ -50,16 +50,26 @@ class Hero extends React.Component {
         v.x += v.xVel * diff;
         v.y += v.yVel * diff;
 
-        if (v.x + vertexSize > window.innerWidth) {
-          v.x = vertexSize;
-        } else if (v.x < vertexSize) {
-          v.x = window.innerWidth - vertexSize;
+        if (v.x > window.innerWidth + vertexSize) {
+          const excessDistance = v.x - (window.innerWidth + vertexSize);
+          v.x = -vertexSize + (excessDistance % window.innerWidth);
+        } else if (v.x < -vertexSize) {
+          const excessDistance = -vertexSize - v.x;
+          v.x =
+            window.innerWidth +
+            vertexSize -
+            (excessDistance % window.innerWidth);
         }
 
-        if (v.y + vertexSize > window.innerHeight) {
-          v.y = vertexSize;
-        } else if (v.y < vertexSize) {
-          v.y = window.innerHeight - vertexSize;
+        if (v.y > window.innerHeight + vertexSize) {
+          const excessDistance = v.y - (window.innerHeight + vertexSize);
+          v.y = -vertexSize + (excessDistance % window.innerHeight);
+        } else if (v.y < -vertexSize) {
+          const excessDistance = -vertexSize - v.y;
+          v.y =
+            window.innerHeight +
+            vertexSize -
+            (excessDistance % window.innerHeight);
         }
 
         const n = 5;
@@ -108,12 +118,11 @@ class Hero extends React.Component {
       <section className="hero">
         <canvas id="hero-animation"></canvas>
         <header className="hero-header">
-          <div className="named-logo">
-            <img src="./images/cbu-robotics-logo.png" alt="CBU Robotics Logo" />
-            <div>
-              CBU Robotics <span className="shiny-stuff">CBU Robotics</span>
-            </div>
-          </div>
+          <img
+            className="logo-image"
+            src="./images/cbu-robotics-logo.png"
+            alt="CBU Robotics Logo"
+          />
         </header>
         <div className="hero-component-container">
           <div className="hero-card-container">

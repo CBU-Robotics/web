@@ -31,59 +31,10 @@
   padding: 0 40px;
 }
 
-@keyframes shine {
-  0% {
-    background-position-x: -150px;
-  }
-
-  50%,
-  100% {
-    background-position-x: 150px;
-  }
-}
-
-.hero .hero-header .shiny-stuff {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(
-    143deg,
-    rgba(0, 0, 0, 0) 43%,
-    #fffa,
-    rgba(0, 0, 0, 0) 57%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: #0000;
-  background-position-x: -150px;
-  background-repeat: no-repeat;
-  animation: shine 6s ease-in-out infinite;
-  pointer-events: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-
-.hero .hero-header .named-logo {
-  display: flex;
-  align-items: center;
-  column-gap: 8px;
+.hero .hero-header img.logo-image {
   opacity: 0;
   animation: slide-up 1.2s ease-in-out forwards;
-}
-
-.hero .hero-header .named-logo div {
-  font-size: 18px;
-  font-weight: 600;
-  font-family: "Open Sans";
-  color: #797c85;
-}
-
-.hero .hero-header .named-logo img {
-  width: 36px;
   height: 36px;
-  display: none;
 }
 
 .hero .hero-component-container {
@@ -102,7 +53,6 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  /* height: 100%; */
   column-gap: 16px;
 }
 
@@ -142,7 +92,8 @@
 }
 
 .hero .snippet.button-container {
-  animation-delay: 2.5s;
+  animation-duration: 1.1s;
+  animation-delay: 3.2s;
   margin: 0 auto;
   display: flex;
   flex-flow: row;
