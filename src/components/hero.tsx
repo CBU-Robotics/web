@@ -15,9 +15,20 @@ class Hero extends React.Component {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
+    let tangent = Math.sqrt(
+      window.innerWidth * window.innerWidth +
+        window.innerHeight +
+        window.innerHeight
+    );
+
     window.onresize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      tangent = Math.sqrt(
+        window.innerWidth * window.innerWidth +
+          window.innerHeight +
+          window.innerHeight
+      );
     };
 
     const vertexSize = 3;
@@ -45,7 +56,7 @@ class Hero extends React.Component {
       last = then;
 
       ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-      ctx.fillStyle = "#323338";
+      ctx.fillStyle = "rgb(35, 57, 86)";
       vertices.forEach((v) => {
         v.x += v.xVel * diff;
         v.y += v.yVel * diff;
@@ -72,7 +83,7 @@ class Hero extends React.Component {
             (excessDistance % window.innerHeight);
         }
 
-        const n = 5;
+        const n = 4;
         let closest = Array(n).fill({
           x: null,
           y: null,
@@ -97,8 +108,8 @@ class Hero extends React.Component {
         ctx.fill();
 
         for (const closestVertex of closest) {
-          ctx.strokeStyle = `rgba(50, 51, 56, ${
-            closestVertex.distance / 2000
+          ctx.strokeStyle = `rgba(35, 57, 86, ${
+            closestVertex.distance / tangent
           })`;
           ctx.beginPath();
           ctx.moveTo(v.x, v.y);
@@ -152,8 +163,8 @@ class Hero extends React.Component {
             </div>
           </div>
           <div className="snippet button-container">
-            <button>Sign Up</button>
-            <button>Sponsor Us</button>
+            <a href="#sign-up">Sign Up</a>
+            <a href="#sponsor-us">Sponsor Us</a>
           </div>
         </div>
       </section>
