@@ -13,8 +13,7 @@ class App extends React.Component {
   render(): React.JSX.Element {
     return (
       <React.Fragment>
-        <GlobalHeader />
-        <Hero />
+      	WIP
         <div style={{ height: "100vh" }}></div>
       </React.Fragment>
     );
