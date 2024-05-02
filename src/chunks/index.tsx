@@ -2,8 +2,6 @@ import "../css/index.css";
 
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
-import Hero from "../components/hero";
-import GlobalHeader from "../components/global-header";
 
 class App extends React.Component {
   constructor(props: {} | Readonly<{}>) {
