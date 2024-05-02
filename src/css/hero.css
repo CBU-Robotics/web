@@ -1,0 +1,12 @@
+section.hero {
+	height: 100vh;
+	padding-inline: 40px;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+section.hero h1 {
+	margin-top: 100px;
+	font-size: 44px;
+	line-height: 2rem;
+}

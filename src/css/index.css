@@ -31,3 +31,8 @@ body {
     Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   margin: 0;
 }
+
+:root {
+	--cbu-gold: #a07400;
+	--cbu-royalblue: #165fb3;
+}

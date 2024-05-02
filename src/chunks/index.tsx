@@ -2,6 +2,8 @@ import "../css/index.css";
 
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
+import GlobalHeader from "../components/global-header";
+import Hero from "../components/hero";
 
 class App extends React.Component {
   constructor(props: {} | Readonly<{}>) {
@@ -11,7 +13,8 @@ class App extends React.Component {
   render(): React.JSX.Element {
     return (
       <React.Fragment>
-      	WIP
+      	<GlobalHeader />
+	<Hero />
         <div style={{ height: "100vh" }}></div>
       </React.Fragment>
     );
