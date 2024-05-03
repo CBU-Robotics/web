@@ -30,14 +30,28 @@ section.hero div.social-media-icons a svg {
 	height: 24px;
 }
 
+/* Carousel */
 section.hero div.image-carousel {
+	--carousel-size: min(1050px, calc(100vw - 80px));
 	margin-top: 50px;
-	width: 100%;
-	overflow: auto;
-	display: flex;
+	width: var(--carousel-size);
+	overflow: hidden;
+	margin: 0 auto;
 }
 
-section.hero div.image-carousel img {
+section.hero div.image-carousel div.image-carousel-strip {
 	width: 100%;
-	height: 100%;
+	display: flex;
+	box-sizing: border-box;
 }
+
+section.hero div.image-carousel div.image-carousel-strip.smooth-slide {
+	transition: transform 1000ms ease-in-out;	
+}
+
+section.hero div.image-carousel div.image-carousel-strip img {
+	width: var(--carousel-size);
+	object-fit: cover;
+	display: block;
+}
+

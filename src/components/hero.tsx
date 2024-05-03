@@ -3,8 +3,44 @@ import "../css/hero.css";
 import * as React from "react";
 
 class Hero extends React.Component {
+	private carouselStripRef: React.RefObject<HTMLDivElement>;
+	private lastSlideRef: React.RefObject<HTMLImageElement>;
+	
 	constructor(props: {} | Readonly<{}>) {
 		super(props);
+		this.carouselStripRef = React.createRef();
+		this.lastSlideRef = React.createRef();
+	}
+
+	componentDidMount() {
+		if (this.carouselStripRef.current == null || this.lastSlideRef == null) {
+			return;
+		}
+
+		const carouselStrip = this.carouselStripRef.current;
+		const carouselWidth = carouselStrip.clientWidth;
+		const carouselImages = carouselStrip.getElementsByTagName("img");
+		let count = 0;
+
+		carouselStrip.style.transform = `translateX(${-carouselWidth * count}px)`;
+
+		const nextSlide = () => {
+			if (count > carouselImages.length - 2) return;
+			carouselStrip.classList.add("smooth-slide");
+			carouselStrip.style.transform = `translateX(${-carouselWidth * ++count}px`;
+		};
+
+		let carouselInterval = window.setInterval(nextSlide, 4000);
+
+		carouselStrip.addEventListener("transitionend", () => {
+			window.clearInterval(carouselInterval);
+			carouselInterval = window.setInterval(nextSlide, 4000);
+			if (carouselImages[count].isEqualNode(this.lastSlideRef.current)) {
+				carouselStrip.classList.remove("smooth-slide");
+				count = 0;
+				carouselStrip.style.transform = `translateX(${-carouselWidth * count}px)`;
+			}
+		});
 	}
 
 	render(): React.JSX.Element {
@@ -16,10 +52,11 @@ class Hero extends React.Component {
 				</a>
 			</div>
 			<div className="image-carousel">
-				<img src="images/shpe-2023.png" alt="Image 1" height="auto"/>
-				<img src="images/shpe-2023.png" alt="Image 1" height="auto"/>
-				<img src="images/shpe-2023.png" alt="Image 1" height="auto"/>
-				<img src="images/shpe-2023.png" alt="Image 1" height="auto"/>
+				<div className="image-carousel-strip" ref={this.carouselStripRef}>
+					<img src="images/shpe-2023.png" alt="SHPE 2023" />
+					<img src="images/cpslo-2023.jpg" alt="Cal Poly SLO 2023 Competition" />
+					<img ref={this.lastSlideRef} src="images/shpe-2023.png" alt="SHPE 2023" />
+				</div>
 			</div>
 		</section>;
 	}
