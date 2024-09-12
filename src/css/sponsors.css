@@ -1,0 +1,42 @@
+.sponsors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+    padding: 10px;
+}
+
+.sponsors ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sponsors li {
+    text-align: center;
+    padding: 10px; 
+}
+
+.sponsors img {
+    max-width: 40%; 
+    height: auto;
+    margin-bottom: 8px; 
+    border-radius: 4px;
+}
+
+.sponsors div {
+    font-weight: bold;
+    color: #333;
+    font-size: 0.85rem; /* Smaller font size */
+}
+
+@media (max-width: 768px) {
+    .sponsors {
+        grid-template-columns: repeat(auto-fit, minmax(90px, 1fr)); /* More compact on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsors {
+        grid-template-columns: 1fr;
+    }
+}

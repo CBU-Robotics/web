@@ -4,6 +4,9 @@ import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import GlobalHeader from "../components/global-header";
 import Hero from "../components/hero";
+import Sponsors from "../components/sponsors";
+import Awards from "../components/awards";
+import Contact from "../components/Contact";
 
 class App extends React.Component {
   constructor(props: {} | Readonly<{}>) {
@@ -15,6 +18,9 @@ class App extends React.Component {
       <React.Fragment>
       	<GlobalHeader />
 	<Hero />
+  <Sponsors />
+  <Awards />
+  <Contact />
         <div style={{ height: "100vh" }}></div>
       </React.Fragment>
     );
