@@ -9,12 +9,15 @@ class GlobalHeader extends React.Component {
 
 	render(): React.JSX.Element {
 		return <header className="global-header">
+      <a className="logo" href="/">
+        <img src="cbu-robotics-logo.png" />
+        <span>CBU Robotics</span>
+      </a>
 			<nav>
 				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/members">Members</a></li>
-					<li><a href="/projects">Projects</a></li>
-					<li><a href="mailto:cbu_robotics@calbaptist.edu" target="_blank">Contact Us</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="#sponsors">Sponsors</a></li>
+					<li><a href="#contact">Contact</a></li>
 				</ul>
 			</nav>
 		</header>;

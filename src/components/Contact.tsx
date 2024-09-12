@@ -1,4 +1,4 @@
-import "../css/Contact.css";
+import "../css/contact.css";
 
 import * as React from "react";
 
@@ -8,12 +8,11 @@ class Contact extends React.Component {
 	}
 
 	render(): React.JSX.Element {
-		return <div>
-				
+		return <section id="contact" className="contact">
+        <h2>Contact Us</h2>
 				<p>Location: TEGR106</p>
-				<p>cbu_robotics@calbaptist.edu</p>
-				<p>www.cburobotics.com</p>
-			</div>
+				<a href="mailto:cbu_robotics@calbaptist.edu" target="_blank">cbu_robotics@calbaptist.edu</a>
+			</section>
 	}
 }
 

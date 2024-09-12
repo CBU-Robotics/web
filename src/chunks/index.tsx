@@ -6,7 +6,7 @@ import GlobalHeader from "../components/global-header";
 import Hero from "../components/hero";
 import Sponsors from "../components/sponsors";
 import Awards from "../components/awards";
-import Contact from "../components/Contact";
+import Contact from "../components/contact";
 
 class App extends React.Component {
   constructor(props: {} | Readonly<{}>) {
@@ -17,11 +17,10 @@ class App extends React.Component {
     return (
       <React.Fragment>
       	<GlobalHeader />
-	<Hero />
-  <Sponsors />
-  <Awards />
-  <Contact />
-        <div style={{ height: "100vh" }}></div>
+        <Hero />
+        <Awards />
+        <Sponsors />
+        <Contact />
       </React.Fragment>
     );
   }

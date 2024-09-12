@@ -8,22 +8,26 @@ class Awards extends React.Component {
 	}
 
 	render(): React.JSX.Element {
-		return <div>
-			<div id="2022">
-			<p>Mt. SAC SPIN UP VEXU Final Qualifier</p>
-				<p>Judges Award</p>
-			</div>
-			<div id="2023">
-				<div>
+		return <section id="awards" className="awards">
+      <h2>2024 Awards</h2>
+			<ul className="awards-list">
+        <li>
+          <p>Mt. SAC SPIN UP VEXU Final Qualifier</p>
+          <p>Judges Award</p>
+        </li>
+			</ul>
+      <h2>2023 Awards</h2>
+			<ul className="awards-list">
+				<li>
 					<p>MtSAC VEXU Over Under Blunder</p>
 					<p>Judges Award</p>
-				</div>
-				<div>
+				</li>
+				<li>
 					<p>2024 VEX Robotics World Championship</p>
 					<p>Sportsmanship Award</p>
-				</div>
-			</div>
-		</div>
+				</li>
+			</ul>
+		</section>;
 	}
 }
 

@@ -9,13 +9,11 @@
 
 ul.sponsor-grid {
     list-style: none;
-    width: min(1020px, calc(100% - 80px));
+    width: 1020px;
     box-sizing: border-box;
     margin-bottom: 100px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 40px;
 }
 
 .sponsors h2 {
@@ -31,15 +29,30 @@ ul.sponsor-grid {
     background-color: #ffffff;
     border-radius: 4px;
     box-shadow: 0 0 4px #0001;
-    width: 320px;
-    height: 220px;
+    width: 280px;
+    height: 200px;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
 }
 
-.sponsors li img {
+.sponsors img {
     max-width: 40%; 
     height: auto;
+    margin-bottom: 8px; 
+    border-radius: 4px;
 }
+
+/*@media (max-width: 768px) {
+    .sponsors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}*/
+
+/*
+@media (max-width: 480px) {
+    .sponsors {
+        grid-template-columns: 1fr;
+    }
+}*/

@@ -1,0 +1,14 @@
+section.contact {
+  width: 100%;
+  padding-block: 40px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  background-color: var(--cbu-royalblue);
+  color: #ffffff;
+}
+
+section.contact a {
+  color: var(--cbu-gold);
+}

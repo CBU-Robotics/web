@@ -1,33 +1,13 @@
 section.hero {
-	height: 100vh;
 	padding-inline: 40px;
 	box-sizing: border-box;
 	width: 100%;
 	padding-top: 100px;
+  padding: 100px 40px 50px 40px;
 }
 
 section.hero div {
 	font-family: monospace;
-}
-
-section.hero h1 {
-	margin-block: 2rem;
-	font-size: 44px;
-	line-height: 2rem;
-}
-
-section.hero div.social-media-icons a {
-	opacity: 0.8;
-	transition: opacity .3s ease-in-out;
-}
-
-section.hero div.social-media-icons a:hover {
-	opacity: 1;
-}
-
-section.hero div.social-media-icons a svg {
-	width: 24px;
-	height: 24px;
 }
 
 /* Carousel */
