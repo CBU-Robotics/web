@@ -2,6 +2,8 @@
   width: 100%;
   padding: 40px;
   box-sizing: border-box;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .awards h2 {
@@ -11,6 +13,7 @@
 .awards-list {
   list-style: none;
   margin-bottom: 100px;
+  padding: 0;
 }
 
 .awards-list li {
@@ -32,3 +35,8 @@
   color: var(--cbu-gold);
 }
 
+@media screen and (max-width: 720px) {
+  .awards {
+    padding: 15px;
+  }
+}

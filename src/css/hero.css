@@ -1,8 +1,6 @@
 section.hero {
-	padding-inline: 40px;
 	box-sizing: border-box;
 	width: 100%;
-	padding-top: 100px;
   padding: 100px 40px 50px 40px;
 }
 
@@ -35,3 +33,12 @@ section.hero div.image-carousel div.image-carousel-strip img {
 	display: block;
 }
 
+@media screen and (max-width: 720px) {
+  section.hero {
+    padding-inline: 15px;
+  }
+
+  section.hero div.image-carousel {
+    --carousel-size: calc(100vw - 30px);
+  }
+}

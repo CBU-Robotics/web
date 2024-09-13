@@ -16,6 +16,7 @@ ul.sponsor-grid {
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
+    padding: 0;
 }
 
 .sponsors h2 {
@@ -26,12 +27,12 @@ ul.sponsor-grid {
 }
 
 .sponsors li {
-    flex: 0 0 280px;
+    flex: 0 0 300px;
     text-align: center;
     background-color: #ffffff;
     border-radius: 4px;
     box-shadow: 0 0 4px #0001;
-    width: 320px;
+    width: 300px;
     height: 220px;
     display: flex;
     flex-flow: column;
@@ -42,4 +43,15 @@ ul.sponsor-grid {
 .sponsors li img {
     max-width: 40%; 
     height: auto;
+    margin-bottom: .5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .sponsors {
+    padding-inline: 0;
+  }
+
+  ul.sponsor-grid {
+    width: 100%;
+  }
 }

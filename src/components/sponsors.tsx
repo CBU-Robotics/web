@@ -50,12 +50,16 @@ class Sponsors extends React.Component {
             <div>SystemGo IT</div>
           </li> 
           <li>
-            <img src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_3a7b992f091003220d0e405c6eb6095c/onshape.png"></img>
+            <img src="onshape.webp"></img>
             <div>onshape</div>
           </li>
           <li>
-            <img src="https://yt3.googleusercontent.com/qD622vWHZaM_-TuHMayew6SqHwKpgcMopLoCgTLHnwC14lzIMHVmYiPk-sxa-Mg20A6FwnpC5n0=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"></img>
+            <img src="eplastics.jpg"></img>
             <div>ePlastics</div>
+          </li>
+          <li>
+            <img src="gene-haas-foundation.jpeg"></img>
+            <div>Gene Haas Foundation</div>
           </li>
         </ul>
 			</section>
